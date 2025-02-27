@@ -18,3 +18,12 @@ window.onbeforeunload = () => {
     form.reset();
   }
 };
+
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".nav");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled"); // Tambah efek saat di-scroll
+  } else {
+    navbar.classList.remove("scrolled"); // Balik ke normal kalau di atas
+  }
+});

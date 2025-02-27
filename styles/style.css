@@ -73,17 +73,29 @@ a {
 
 /* Buttons */
 .btn {
-  padding: 1rem 1.5rem;
-  background: #ececec; /* Warna abu-abu muda agar tidak hilang di background */
-  border: 1.5px solid #bbb;
+  padding: 0.8rem 1.5rem; /* Sedikit lebih proporsional */
+  background: rgba(240, 240, 240, 0.2); /* Lebih transparan */
+  backdrop-filter: blur(8px); /* Blur sedikit lebih natural */
+  border: 1.5px solid rgba(187, 187, 187, 0.6); /* Biar nggak terlalu solid */
+  border-radius: 8px; /* Lebih smooth */
   color: #333;
+  font-weight: 500; /* Biar tulisannya lebih jelas */
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
+/* Efek hover */
 .btn:hover {
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  background: rgba(240, 240, 240, 0.4); /* Lebih terlihat saat hover */
+  transform: scale(1.05); /* Efek sedikit membesar */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Glow lembut */
 }
+
+/* Efek klik */
+.btn:active {
+  transform: scale(0.98); /* Efek ditekan */
+}
+
 
 /* Titles */
 .section-title {
@@ -129,9 +141,9 @@ a {
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba(240, 240, 240, 0.9); /* Transparan lebih jelas */
-  backdrop-filter: blur(12px); /* Blur sedikit lebih kuat */
-  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  background: rgba(240, 240, 240, 0.25);; /* Transparan lebih jelas */
+  backdrop-filter: blur(10px); /* Blur agak dikurangi biar nggak terlalu tebel */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Glow lebih smooth */
   border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Garis bawah lebih soft */
@@ -140,7 +152,7 @@ a {
 
 /* Efek saat navbar di-scroll */
 .nav.scrolled {
-  background: rgba(255, 255, 255, 0.2); /* Transparan lebih pekat */
+  background: rgba(255, 255, 255, 0.10); /* Transparan lebih pekat */
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4); /* Glow lebih kuat */
 }
 
